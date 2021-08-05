@@ -7,14 +7,6 @@ const officers = [
   { id: 88, name: 'Commander Jerjerrod' }
 ];
 
-const testers = [
-  {code: '황준호'}
-]
-
-officers = testers
-// 이거는 주석
-/* 이것도 주석 */
-
 const officersIds = [];  // 빈 배열 선언
 officers.forEach(function (officer){ //officers 배열로부터 데이터 한 줄 받아오는 펑션
   officerIds.push(officer.id);  //빈 배열에 받아온 데이터 한 줄 중 id 값 넣기
