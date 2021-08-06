@@ -1,6 +1,21 @@
+/* 
+Array 인스턴스
+- 모든 Array 인스턴스는 Array.prototype을 상속함
+
+Array 인스턴스 메서드 종류
+1. 변경자 메서드
+2. 접근자 메서드 : filter()
+3. 순회 메서드 : map(), reduce(), findIndex()
+
+https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+*/
+
+
+
 // 1. Map() ==============================
 // Array.prototype.map() 함수
-// 배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환
+// 배열의 모든 요소 각각에 대하여 주어진 콜백 함수를 호출하고, 그 반환값을 모은 새로운 배열을 반환
 // 원 배열과 결과 값을 받아 온 배열의 길이는 항상 같다
 
 const officers = [
@@ -23,6 +38,7 @@ const officersIds = officers.map(officer => officer.id);  //화살표로 더 간
 
 // 2. reduce() ==============================
 // Array.prototype.reduce() 함수
+// 주어진 콜백 함수를 가산기와 요소 각각에 대해 왼쪽에서 오른쪽으로 호출하여 하나의 값으로 줄인(reduce) 결과를 반환
 // 하나의 결과값을 반환
 
 const pioits = [
@@ -40,7 +56,7 @@ const totalYears = pioits.reduce((acc, pioit) => acc + pioits.years, 0);  //화�
 
 // 3. filter() ==============================
 // Array.prototype.filter() 함수
-// 주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환
+// 지정한 콜백의 반환 결과가 true인 요소만 모은 새로운 배열을 반환
 // 원 배열과 결과 값을 받아 온 배열의 길이가 다를 수 있음
 
 const pilots = [
@@ -60,3 +76,7 @@ const empires = pioit.filter(function(pilot){
 
 const rebels = pilots.filter( pilot => pilot.faction == "Rebels" );  //화살표로 더 간결하게 사용 가능
 const empires = pilots.filter( pilot => pilot.faction == "Empire" );  //화살표로 더 간결하게 사용 가능
+
+// 4. findIndex() ==============================
+// Array.prototype.findIndex() 함수
+// 주어진 판별 콜백을 만족하는 첫 번째 요소의 인덱스를 반환합니다. 만족하는 요소가 없으면 -1를 반환
