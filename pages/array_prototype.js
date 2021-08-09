@@ -1,3 +1,20 @@
+/*
+Prototype이란?
+- JAVA의 클래스와 비슷한 개념
+- 자바 스크립트 : 기존의 객체를 복사하여 새로운 객체를 생성하는 프로토타입 기반의 언어
+- Prototype은 Prototype Object와 Prototype Link가 있음.
+
+1. Prototype Object
+- 객체는 언제나 function으로 생성됨
+- 함수를 정의하면 함수만 생성되는 것이 아니라 Prototype Object도 같이 생성됨. 그리고 생성된 함수는 prototype이라는 속성을 통해 Prototype Object에 접근할 수 있음
+
+2. Prototype Link
+- 프로토타입 체인 : proto 속성을 통해 상위 프로토타입과 연결되어 있는 형태의 구조
+- 프로토타입 체인 구조 때문에 모든 객체는 Object의 자식이라고 불리고, Object Prototype Object에 있는 모든 속성을 사용할 수 있음.
+
+*/
+
+
 /* 
 Array 인스턴스
 - 모든 Array 인스턴스는 Array.prototype을 상속함
