@@ -25,3 +25,8 @@ const object1 = {
 
 console.log(Object.keys(object1));  // ["a", "b", "c"]
 
+// 2. values() ==============================
+// Object.values() 함수
+// 주어진 객체의 열거가능한 모든 스트링 속성들의 값들을 포함하고 있는 배열을 반환
+
+console.log(Object.values(object1));  //["something" , 42, false]
