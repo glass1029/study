@@ -14,21 +14,21 @@ Prototype이란?
 
 */
 
-
 /* 
 Array 인스턴스
 - 모든 Array 인스턴스는 Array.prototype을 상속함
 
 Array 인스턴스 메서드 종류
-1. 변경자 메서드
-2. 접근자 메서드 : filter()
-3. 순회 메서드 : map(), reduce(), findIndex()
+1. 변경자 메서드 : 배열을 수정
+- copyWithin(), fill(), pop(), push(), reverse(), shift(), sort(), splice(), unshift()
+2. 접근자 메서드 : 배열을 수정하지 않고, 기존 배열의 일부에 기반한 새로운 배열 또는 반환 
+- concat(). filter(), includes(), indexOf(), join(), lastIndexOf(), slice(), toString(), toLocaleString()
+3. 순회 메서드 : 배열을 처리하면서 호출할 콜백 함수를 받음
+- entries(), every(), find(), findIndex(), forEach(), keys(), map(), reduce(), reduceRight(), some(), values()
 
 https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array
 
 */
-
-
 
 // 1. Map() ==============================
 // Array.prototype.map() 함수
@@ -96,4 +96,21 @@ const empires = pilots.filter( pilot => pilot.faction == "Empire" );  //화살�
 
 // 4. findIndex() ==============================
 // Array.prototype.findIndex() 함수
-// 주어진 판별 콜백을 만족하는 첫 번째 요소의 인덱스를 반환합니다. 만족하는 요소가 없으면 -1를 반환
+// 주어진 판별 콜백을 만족하는 첫 번째 요소의 인덱스를 반환 (만족하는 요소가 없으면 -1를 반환)
+
+const array1 = [5, 12, 8, 130, 44];
+
+//const isLargenumber = function(element){  //1단계
+//  return element > 13
+//};
+
+const isLargenumber = (element) => {  //2단계   ==> 해당 작성 방식이 익숙해지도록 하기! 선언부 앞의 'function' 삭제, 선언부 뒤에 '=>' 추가 
+  if (element > 13) {
+    return element;
+  }
+};
+
+//const isLargenumber = (element) => (element > 13);  //3단계 
+//const isLargenumber = (element) => element > 13;  //4단계 
+//const isLargenumber = array1.map((num) => (num + 1));  //5단계 
+console.log(array1.findIndex(inLargeNumber));
