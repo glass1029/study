@@ -35,13 +35,14 @@ const movies = [
 // 1번: movies title 들이 들어 있는 배열을 만들어주세요!
 
 const titles = movies.map(movie => {
-return movie.title
+  return movie.title
 });
 
 console.log(titles);
 
 // 2번: language 가 en 인 영화만 모아주세요!
 const enMoviesOnly = movies.filter(movie => {
-return movie.language == "en";
+  return movie.language == "en";
 });
+
 console.log(enMoviesOnly);
