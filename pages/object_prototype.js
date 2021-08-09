@@ -1,4 +1,5 @@
 /*
+
 Object prototype
 
 - JavaScript에서 모든 객체들은 Object의 자손
@@ -11,3 +12,16 @@ Object prototype
 Object 생성자의 메서드 : assign(), create(), defineProperty(), defineProperties(), freeze(), getOwnPropertyDescriptor(), getOwnPropertyNames(), getOwnPropertySymbols(), getPrototypeOf(), is(), isExtensible(), isFrozen(), isSealed(), keys(), preventExtensions(), seal(), setPrototypeOf(), values()
 
 */
+
+// 1. keys() ==============================
+// Object.keys() 함수
+// 주어진 객체 자신의 열거가능한 속성들의 이름의 배열을 반환
+
+const object1 = {
+  a: 'something',
+  b: 42,
+  c: false
+};
+
+console.log(Object.keys(object1));  // ["a", "b", "c"]
+
