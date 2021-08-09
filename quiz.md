@@ -47,9 +47,15 @@ const titles = [];
 console.log(titles) // 1번 결과물 참조
 
 // 2번: language 가 en 인 영화만 모아주세요!
-const enMoviesOnly = []
+const enMoviesOnly = [];
 // ... 요 부분을 잘 작성하기 ...
 console.log(enMoviesOnly) // 2번 결과물 참조
+
+//3번: 아래와 같이 데이터를 재조합해보기!
+const compound = [];
+//
+console.log(compound); //3번 결과물 참조
+
 ```
 
 ```javascript
@@ -86,6 +92,20 @@ console.log(enMoviesOnly) // 2번 결과물 참조
       }
     ]
   }
+}
+
+3번 결과물
+const compound = {
+  id: [ 34599, 34598, 34596, 34593, 34591 ],
+  title: [
+    'To Be Someone',
+    'Stage Fright',
+    'Resurgence',
+    'The Way We Keep Dancing',
+    'Out of Time'
+  ],
+  rating: [ 7.9, 4.6, 7.7, 6.7, 5.9 ],
+  language: [ 'en', 'en', 'en', 'cn', 'en' ]
 }
 ```
 
