@@ -45,3 +45,13 @@ const enMoviesOnly = exam.data.movies.filter(movie => {
   return movie.language == "en";
 });
 console.log(enMoviesOnly);
+
+// 3번
+const compound = {
+  id : exam.data.movies.map(movie => movie.id),
+  title : exam.data.movies.map(movie => movie.title),
+  rating : exam.data.movies.map(movie => movie.rating),
+  language : exam.data.movies.map(movie => movie.language),
+};
+
+console.log(compound);
